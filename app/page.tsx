@@ -1,8 +1,14 @@
+import UI from "./ui";
+
 export const metadata = {
   title: "Netflix",
   description: "Netflix using TMDB API",
 };
 
 export default function Home() {
-  return <main>Netflix</main>;
+  return (
+    <main>
+      <UI />
+    </main>
+  );
 }
