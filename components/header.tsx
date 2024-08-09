@@ -4,7 +4,7 @@ import Logo from "./logo";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 left-0 right-0 px-4 py-2 bg-gray-900 flex justify-between items-center">
+    <header className="sticky top-0 left-0 right-0 px-4 py-2 bg-gray-900 flex justify-between items-center z-50">
       <nav className="flex gap-2">
         <Logo />
         <ul className="flex gap-2 text-white">
