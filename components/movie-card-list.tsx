@@ -4,11 +4,15 @@ import { getAllMovies } from "actions/movieActions";
 import MovieCard from "./movie-card";
 import { useQuery } from "@tanstack/react-query";
 import { Spinner } from "@material-tailwind/react";
+import { useRecoilValue } from "recoil";
+import { searchState } from "utils/recoil/atoms";
 
 export default function MovieCardList() {
+  const search = useRecoilValue(searchState);
+
   const getAllMoviesQuery = useQuery({
-    queryKey: ["movie"],
-    queryFn: () => getAllMovies(),
+    queryKey: ["movie", search],
+    queryFn: () => getAllMovies(search),
   });
 
   if (getAllMoviesQuery.isPending)
